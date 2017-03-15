@@ -1,0 +1,60 @@
+#container{
+	height: 400px;
+    width: 550px;
+    background-color: grey;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 0px 0px #009de4;
+    -moz-box-shadow: 0px 4px 0px 0px #009de4;
+    -webkit-box-shadow: 0px 4px 0px 0px #009de4;
+    position: relative;
+}
+
+#head{
+	color: white;
+	font-size: 70px;
+	text-align: center;
+	/*margin-top: 80px;*/
+}
+
+#startreset{
+    width: 78px;
+    padding: 10px;
+    background-color: rgba(255,255,255,0.5);
+/*    margin: 0 auto;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -ms-transition: all 0.2s;*/
+    }
+
+
+#guessedWord{
+	text-align: center;
+	padding-top: 20px;
+	font-size: 60px;
+	color: white;
+
+}
+
+#guessedLetter{
+	font-size: 40px;
+	color: white;
+}
+
+body{
+	background-image: url(https://s.blogcdn.com/www.dailyfinance.com/media/2013/04/game-of-thrones-stocks-604cs040113--cs040113-1364849083.jpg);
+}
+
+.move{
+	margin-left: 175px;
+}
+
