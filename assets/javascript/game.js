@@ -1,107 +1,49 @@
-document.addEventListener("DOMContentLoaded", function () {
+//// create random words
+var options = ["jaime", "tyrion", "cersei", "khaleesi", "ned", "arya", "jon snow", "winterfell", "sansa", "joffrey", "ramsay", "hodor", "bran", "stark"];
+//pick random word
+var randomWord = options[Math.floor(Math.random() * options.length)];
+// show random word in browser
+console.log("The word is: " + computerGuess);
 
-	//// create random words
-	var words = ["jaime", "tyrion", "cersei", "khaleesi", "ned", "arya", "jon snow", "winterfell", "sansa", "joffrey", "ramsay", "hodor", "bran", "stark"];
+var wins = 0;
+var guessesRemaining = 30;
+var guessedLetters = [];
 
-	//// pick random word
-	// give us a random number between 0 and 1
-	var random = Math.random();
 
-	// give us an index for our array that will work
-	// words an array - length property
-	// between 0 and 3 with decimals
-	var indexRandom = random * words.length;
+	//capture user inputs with keyup.
+	document.onkeyup = function() {
+    var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+    console.log(userGuess);
+   
+   guessedLetters.push(userGuess);
+   for(var i = 0; i < options.length; i++){
+   if(userGuess === randomWord.length){
+   	alert("Great Job! You must really know your Game of Thrones! Guess another one!")
+   	wins++;
+   } else if (guessesRemaining === 0){
+   	alert("Game over");
+   }
 
-	// an integer between 0-2
-	var flooredNumber = Math.floor(indexRandom);
+   //create a score keeper that decrements with incorrect guesses.
 
-	// get our random word
-	var randomWord = words[flooredNumber];
+//create a counter that increments with each keyed letter.
 
-	// test our random word getter
-	console.log(words[flooredNumber]);
-	
-	//// display underscores according to chosen word
 
-	// generate an array with as many underscores as the length of our chosen word
-	var uArr = [];
 
-	for (var i = 0; i < randomWord.length; i++){
-		uArr.push("_");
-	}
+//display to user blank fields that match the number of letters.
 
-	console.log(uArr);
+//capture user inputs with keyup.
 
-	//// display our underscores
+//if user keys a letter contained in the word, display the letter and
+//increment score.
 
-	// get element by id
-	// document.getElementById("guessedWord");
+//if user keys a letter not in word, decrement score keeper.
 
-	// more generic, get element by id or class...
-	// like in css
-	// # targets an id
-	// . targets a class
-	//   targets an element(tag)
-	var element = document.querySelector("#guessedWord");
-	//console.log(element);
+//if score keeper reaches 0, end game and alert "you lose".
 
-	// var eHtml = element.innerHTML;
-	// console.log(eHtml);
+//if all letters are selected for the word, alert "you win" and start game over. 
 
-	element.innerHTML = uArr.join(" ");
 
-	// listen for our key up event
+    
 
-	var guessedLetters = [];
 
-	document.onkeyup = function (event) {
-		// get our entered key
-		var keyChar = event.keyCode;
-		//console.log(keyChar);
-
-		keyChar = String.fromCharCode(keyChar);
-		//console.log(keyChar);
-
-		keyChar = keyChar.toLowerCase(); 
-		//console.log(keyChar);
-
-		// see if that key matches any letter in our random word
-		// Types: string, boolean, and number
-
-		//check to see if guessed letter has already been guessed
-		// check if user input is inside letters array
-		var flag = false; 
-	for (var i = 0; i < guessedLetters.length; i++){
-		if (keyChar == guessedLetters[i]){
-			flag == true;
-			break;
-
-		}
-	}
-
-		if (flag === false) {
-
-		for (var i = 0; i <randomWord.length; i++) {
-			// compare input letter to current letter
-			if (keyChar === randomWord.charAt(i)) {
-				uArr[i] = keyChar;
-				console.log("cgchgchg");
-			} else {
-		
-			}
-		}
-			// push/add letter to our guessedLetters array
-			// to-do only add not guessed letters, make sure they don't repeat, don't let them guess again
-				guessedLetters.push(keyChar);
-
-		console.log(uArr);
-		document.querySelector("#guessedWord").innerHTML = uArr.join(" ");
-		document.querySelector("#guessedLetters").innerHTML = guessedLetters.join(" ");
-		}
-
-		//change button to reset    
-document.getElementById("startreset").innerHTML = "Reset Game";
-	
-};
-
-});
