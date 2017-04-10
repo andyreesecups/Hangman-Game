@@ -1,60 +1,31 @@
-#container{
+#header {
+	text-align: center;
+	font-family: 'Abril Fatface', cursive;
+}
+
+p {
+	font-family: 'Rubik', sans-serif;
+}
+
+
+section {
+	width: 80%;
+	font-size: 18px;
+	margin-left: 100px;
 	height: 400px;
-    width: 550px;
-    background-color: grey;
-    margin: 80px 100px 100px 100px;
-    padding: 20px;
-    border-radius: 30px;
-    box-shadow: 0px 4px 0px 0px #009de4;
-    -moz-box-shadow: 0px 4px 0px 0px #009de4;
-    -webkit-box-shadow: 0px 4px 0px 0px #009de4;
-    position: relative;
-}
-
-#head{
-	color: white;
-	font-size: 70px;
 	text-align: center;
-	/*margin-top: 80px;*/
+}
+
+#container {
+	margin: 20px;
+	padding: 40px;
+	border-radius: 10px;
+	margin-top: 50px;
+	height: 500px;
+	background-color: lightgrey;
+	box-shadow: 0px 4px 0px 0px grey;
 }
 
 
-
-
-#guessedWord{
-	text-align: center;
-	padding-top: 20px;
-	font-size: 60px;
-	color: white;
-
-}
-
-#guessedLetter{
-	font-size: 40px;
-	color: white;
-}
-
-body{
-	background-image: url(https://s.blogcdn.com/www.dailyfinance.com/media/2013/04/game-of-thrones-stocks-604cs040113--cs040113-1364849083.jpg);
-}
-
-.move{
-	margin-left: 175px;
-}
-#wordSpace{
-    font-size: 50px;
-    color: white;
-    text-align: center;
-    padding-bottom: 40px;
-}
-
-#letters {
-    height: 100px;
-    width: 100px;
-    background-color: grey;
-    margin: 80px 100px 500px 300px;
-    position: absolute;
-
-}
 
 

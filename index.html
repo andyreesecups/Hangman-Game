@@ -5,18 +5,29 @@
     <title>Game of Thrones Hangman</title>
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Rubik" rel="stylesheet">
 </head>
 
-<body unload>
+<body>
+    <header>
+        <div id="header">
+            <h1>Game of Thrones Hangman</h1>
+        </div>
+    </header>
     <div id="container">
-        <div id="head">Press any key to get started. Guess as many Game of Thrones characters as you can.</div>
-        <div id="guessedWord"></div>
-        <div id="wordSpace"></div>
+        <section>
+            <p>Guesses Left: <span id="guesses-left"></span></p>
+            <p>Wrong Guesses: <span id="wrong-guesses"></span></p>
+            <p>Wins: <span id="win-counter"></span></p>
+            <p>Losses: <span id="loss-counter"></span></p>
+            <h3 id="word-blank"></h3>
+            <p>
+                Instructions: Guess your favorite Game of Thrones characters. You have 15 wrong guesses until you lose. Please remember, Game of Thrones characters can be tricky to spell (and guess). Good luck!
+            </p>
+        </section>
     </div>
     <script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
 
 </html>
-
-
-
