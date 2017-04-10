@@ -8,7 +8,7 @@
 
  var winCounter = 0;
  var lossCounter = 1;
- var numGuesses = 9;
+ var numGuesses = 15;
 
  function startGame() {
      /*
@@ -17,7 +17,7 @@
      3.add underscores to the HTML
      4. numGuesses is always equal to 9, blanksAndSuccesses and wrongGuesses are both empty arrays }
      */
-     numGuesses = 9;
+     numGuesses = 15;
      blanksAndSuccesses = [];
      wrongGuesses = [];
 
